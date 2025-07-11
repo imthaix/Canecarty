@@ -1,0 +1,140 @@
+:root{
+    --cor-primaria: #f1d7b8; /* 60% */
+    --cor-secundaria: #4b2a1a; /* 30¨*/
+    --cor-terciaria: #c6ceae; /* 10% */
+    --detalhamento: #3d1e0f; /* algumas cores que precisam diferenciar */
+}
+
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* tirar o scrool da tela*/
+html{
+    height: 100%;
+    margin: 0; /* margem total do site */
+    overflow: hidden;
+} 
+
+main{
+    background: #f1d7b8;
+    background-size: cover;
+    width: 100%;
+    height: 92vh;
+    flex: 1px;
+}
+
+.container-carrossel{
+    background-color: black;
+    width: 700px;  /* largura do container que tem as imagens */
+    padding: 40px;
+    height: 500px; /* altura do container que tem as imagens */
+    overflow: hidden; /* esconder as outras imagens da caneca */
+}
+
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+/* posição da primeira imagem */
+.slide{
+    width: 30%;
+    position: relative;
+}
+
+/* tamanho da imagem */
+.slide img{
+    width: 500px;
+}
+
+/* botão radio (bolinhas brancas) para alterar as fotos */
+.manual-navigation{
+    position: absolute;
+    width: 80%;
+    /*width: 1500px;*/
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid #FFF;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: #FFF;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -30%;
+}
+#radio3:checked ~ .first{
+    margin-left: -60%;
+}
+#radio4:checked ~ .first{
+    margin-left: -90%;
+}
+
+.navigation-auto div{
+    border: 2px solid blue;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+/* botão radio (bolinhas azuis) para alterar as fotos */
+.navigation-auto{
+    position: absolute;
+    width: 80%;
+    /*width: 1500px;*/
+    margin-top: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #FFF;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #FFF;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: #FFF;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: #FFF;
+}
+
+@media (max-width: 999px) {
+    .container-carrossel .main .slide .slides {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
