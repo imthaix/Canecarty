@@ -1,3 +1,4 @@
+// navegação do menu em geral
 class MobileNavbar {
   constructor(mobileMenu, navList, navLinks) {
     this.mobileMenu = document.querySelector(mobileMenu);
@@ -44,3 +45,5 @@ const mobileNavbar = new MobileNavbar(
 );
 mobileNavbar.init();
 
+
+//script para navegação do user e carrinho de compras

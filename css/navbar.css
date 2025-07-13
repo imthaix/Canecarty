@@ -62,7 +62,7 @@ nav{
     transition: 0.3s;
 }
 
-@media (max-width: 999px){
+@media (max-width: 900px){
     body{
         overflow-x: hidden;
     }
@@ -87,8 +87,10 @@ nav{
     .mobile-menu{
     display: block;
     }
-}
 
+
+    
+}
 .nav-list.active{
     transform: translateX(0);
 }
@@ -117,10 +119,10 @@ nav{
 }
 
 
-.img-carrinho,
+.img-card,
 .img-user{
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     margin-right: 10px;
 }
 
@@ -128,20 +130,12 @@ nav{
 
 /* FOOTER QUE VAI SER PADRÃO E FIXADA EM TODAS EM PAGINAS */
 
-footer {
-    background-color: var(--cor-secundaria);
-    padding: 20px;
-    justify-content: space-between;
-    display: flex;
-}
-
-footer .icon-footer{
-    width: 20px;
-    height: 20px;
-    margin-right: 20px;
-}
-
-section a{
-    justify-content: center;
-    align-items: center;
+footer{
+    background: var(--cor-secundaria);
+    color: var(--cor-terciaria);
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }

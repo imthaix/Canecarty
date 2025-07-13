@@ -5,22 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Canecarty </title>
+    <title> Home | Canecarty </title>
+
+<!-- aqui são os scripts do javascript que vão deixar o site mais dinâmico -->
+    <script src="/js/mobile-navbar.js" defer ></script> <!-- o defer é para ele carregar depois do site pronto -->
+    <script src="/js/index.js" defer ></script>
 
     <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="/css/index.css">
-
 </head>
 
+<!-- aqui começa o corpo, onde vai ficar todo o site  -->
     <body>
 
+        <!-- aqui onde fica a navegação, ou seja o menu para o usuário-->
         <header>
             <nav>
-
                 <ul class="nav-list">
-                    <li><a href="/html/index.html"> Home </a></li>
                     <li><a href="#"> Coleção </a></li>
                     <li><a href="#"> Sobre </a></li>
+                    <li><a href="#"> Feedback </a></li>
                 </ul>
 
                 <div class="mobile-menu">
@@ -38,23 +42,70 @@
                             </a>
 
                             <a href="#">
-                                <img src="/assets/carrinho.png" alt="carrinho" class="img-carrinho">
+                                <img src="/assets/carrinho.png" alt="carrinho" class="img-card">
                             </a>
                         </div>
                     </nav>
 
             </nav>
+        <!-- fim da navegação do menu do site-->
         </header>
 
 
+        <!-- aqui já é a home que vai ficar as imagens com informações principais. mantendo sempre clean. -->
         <main>
+            <section class="container">
 
-            
+                <section class="slider">
+                    <div class="slider-content">
+
+                        <input type="radio" name="btn-radio" id="radio1">
+                        <input type="radio" name="btn-radio" id="radio2">
+                        <input type="radio" name="btn-radio" id="radio3">
+                        <input type="radio" name="btn-radio" id="radio4">
+
+                        <!-- imagens dos sliders-->
+                        <div class="slide-box first">
+                            <img class="img-desktop" src="/images/slide-1.jpg" alt="slide 1">
+                            <img class="img-mobile" src="/images/slide-1-mob.jpg" alt="slide 1">
+                        </div>
+
+                        <div class="slide-box">
+                            <img class="img-desktop" src="/images/slide-2.jpg" alt="slide 2">
+                            <img class="img-mobile" src="/images/slide-2-mob.jpg" alt="slide 2">
+                        </div>
+
+                        <div class="slide-box">
+                            <img class="img-desktop" src="/images/slide-3.jpg" alt="slide 3">
+                            <img class="img-mobile" src="/images/slide-3-mob.jpg" alt="slide 3">
+                        </div>
+
+                        <!-- navegação automatica dos radios buttons -->
+                        <div class="nav-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                        </div>
+
+                        <!-- navegação clicavel dos radios buttons -->
+                        <div class="nav-manual">
+                            <label for="radio1" class="manual-btn"></label>
+                            <label for="radio2" class="manual-btn"></label>
+                            <label for="radio3" class="manual-btn"></label>
+                        </div>
+
+                    </div>
+                </section>
+
+            </section>
         </main>
 
 
-        <script src="/js/mobile-navbar.js"></script>
-        <script src="/js/index.js"></script>
+        <!-- esse é o rodapé, vai ser bem simples sem muitos dados, mas para deixar organizado -->
+        <footer>
+            <p> &copy; 2025 Canecarty. Todos os direitos reservados. </p>
+            <p> Desenvolvido por <a href="https://www.instagram.com/imtouchs/" target="_blank"> @imtouchs </a> </p>
+        </footer> 
 
     </body>
 </html>

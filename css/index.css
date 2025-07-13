@@ -11,13 +11,13 @@ body{
     padding: 0;
     flex-direction: column;
     box-sizing: border-box;
+    /*overflow: hidden;  tira o scroll da tela */
 }
 
 /* tirar o scrool da tela*/
 html{
     height: 100%;
     margin: 0; /* margem total do site */
-    overflow: hidden;
 } 
 
 main{
@@ -28,113 +28,105 @@ main{
     flex: 1px;
 }
 
-.container-carrossel{
-    background-color: black;
-    width: 700px;  /* largura do container que tem as imagens */
-    padding: 40px;
-    height: 500px; /* altura do container que tem as imagens */
-    overflow: hidden; /* esconder as outras imagens da caneca */
+section.slider{
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    overflow: hidden; /* para sumir o scroll lateral da tela */
 }
 
-.slides{
-    width: 400%;
-    height: 400px;
+.slider-content{
+    width: 400%; /* tamanho das imagens 500% me agrada. verificar quando colocar as imagens real */
+    height: auto;
+    margin-top: 5%;
     display: flex;
 }
 
-.slides input{
-    display: none;
+.slider-content input, .img-mobile{ /* como eu coloquei o img mobile, elas tambem somem da tela */
+    display: none; /* esconde os inputs */
 }
 
-/* posição da primeira imagem */
-.slide{
-    width: 30%;
+.slide-box{
+    width: 25%;
+    height: auto;
     position: relative;
+    text-align: center;
+    transition: 1s;
 }
 
-/* tamanho da imagem */
-.slide img{
-    width: 500px;
+.slide-box img{
+    width: 100%;
 }
 
-/* botão radio (bolinhas brancas) para alterar as fotos */
-.manual-navigation{
+.nav-manual, .nav-auto{ /* button radio */
     position: absolute;
-    width: 80%;
-    /*width: 1500px;*/
-    margin-top: 200px;
+    width:100%;
+    margin-top: 35%;
     display: flex;
     justify-content: center;
 }
 
-.manual-btn{
-    border: 2px solid #FFF;
-    padding: 5px;
-    border-radius: 10px;
+
+.nav-manual .manual-btn, .nav-auto div{ /* button radio */
+    border: 1px solid var(--cor-secundaria);
+    padding: 10px;
+    border-radius: 50%;
     cursor: pointer;
-    transition: 1s;
+    transition: 0.5s;
 }
 
-.manual-btn:not(:last-child){
-    margin-right: 40px;
+/* o last child significa que eu quero que menos o ultimo button não tenha o mesmo estilo que as outras bolinhas */
+.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child){ /* aqui temos a nav tanto manual quanto automatico para interagir com o js */
+    margin-right: 10px; /* espaçamento entre os botões */
+
 }
 
-.manual-btn:hover{
-    background-color: #FFF;
+.nav-manual .manual-btn:hover{ /* efeito de quando passar o mouse por cima do button */
+    background: var(--cor-secundaria);
+    color: var(--cor-primaria);
 }
 
+/* sempre que o radio estiver marcado, ele muda o background para o outro radio */
+#radio1:checked ~ .nav-auto .auto-btn1,
+#radio2:checked ~ .nav-auto .auto-btn2,
+#radio3:checked ~ .nav-auto .auto-btn3{
+    background: var(--cor-secundaria);
+}
+
+/* passagem de uma imagem para a outra */
 #radio1:checked ~ .first{
-    margin-left: 0;
+    margin-left: 0%;
 }
+
 #radio2:checked ~ .first{
-    margin-left: -30%;
+    margin-left: -25%;
 }
+
 #radio3:checked ~ .first{
-    margin-left: -60%;
-}
-#radio4:checked ~ .first{
-    margin-left: -90%;
+    margin-left: -50%;
 }
 
-.navigation-auto div{
-    border: 2px solid blue;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-}
-
-/* botão radio (bolinhas azuis) para alterar as fotos */
-.navigation-auto{
-    position: absolute;
-    width: 80%;
-    /*width: 1500px;*/
-    margin-top: 600px;
-    display: flex;
-    justify-content: center;
-}
-
-.navigation-auto div:not(:last-child){
-    margin-right: 40px;
-}
-
-#radio1:checked ~ .navigation-auto .auto-btn1{
-    background-color: #FFF;
-}
-#radio2:checked ~ .navigation-auto .auto-btn2{
-    background-color: #FFF;
-}
-#radio3:checked ~ .navigation-auto .auto-btn3{
-    background-color: #FFF;
-}
-#radio4:checked ~ .navigation-auto .auto-btn4{
-    background-color: #FFF;
-}
-
-@media (max-width: 999px) {
-    .container-carrossel .main .slide .slides {
-        flex-direction: column;
-        align-items: center;
+@media screen and (max-width: 900px) {
+    .img-desktop{
+        display: none; /* esconde as imagens desktop */
     }
-}
 
+    .img-mobile{
+        display: block; /* mostra as imagens mobile */
+    }
+
+    .nav-auto, .nav-manual{
+        margin-top: 60%; /* muda a posição dos botões para baixo */
+    }
+
+    .img-card, .img-user{
+        width: 40%; /* diminui o tamanho das imagens */
+    }
+
+    .logo{
+        font-size: 20px; /* diminui o tamanho da logo */
+        letter-spacing: 20px; /* diminui o espaçamento entre as letras */
+    }
+
+}
