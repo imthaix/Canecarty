@@ -35,11 +35,23 @@
 
                 <a class="logo" href="/html/index.html"> CANECARTY </a>
 
+
                     <nav>
                         <div class="img-navbar">
-                            <a href="#">
+
+                            <button>
                                 <img src="/assets/user.png" alt="user" class="img-user">
-                            </a>
+                            </button>
+
+                            <!-- tela popup modal para criação de conta/acesso a conta do usuario -->
+                            <dialog open>
+                                <h2> Crie sua conta </h2>
+                                <form method="dialog">
+                                    <input type="email" placeholder="Digite seu email" required>
+                                    <input type="password" placeholder="Digite sua senha" required>
+                                    <button type="submit"> Criar conta </button>
+                            </dialog>
+
 
                             <a href="#">
                                 <img src="/assets/carrinho.png" alt="carrinho" class="img-card">

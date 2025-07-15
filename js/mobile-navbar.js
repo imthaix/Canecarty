@@ -47,3 +47,10 @@ mobileNavbar.init();
 
 
 //script para navegação do user e carrinho de compras
+// criação de conta/acesso ao usuário
+const button = document.querySelector("button")
+const modal = document.querySelector("dialog")
+
+button.oneclick = function () {
+  modal.showModal()
+}
