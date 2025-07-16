@@ -48,9 +48,29 @@ mobileNavbar.init();
 
 //script para navegação do user e carrinho de compras
 // criação de conta/acesso ao usuário
-const button = document.querySelector("button")
-const modal = document.querySelector("dialog")
+const buttonUser = document.querySelector(".btn-user")
+const modalUser = document.querySelector("dialog")
+const btnCloseForm = document.querySelector(".btn-closeForm")
 
-button.onclick = function () {
-  modal.show()
+buttonUser.onclick = function () {
+  modalUser.show()
+}
+
+btnCloseForm.onclick = function () {
+  modalUser.close()
+}
+
+
+
+// criação do acesso ao carrinho de compras
+const buttonCart = document.querySelector(".btn-cart")
+const modalCart = document.querySelector("dialog.dialogCart")
+const btnCloseCart = document.querySelector(".btn-goCart")
+
+buttonCart.onclick = function () {
+  modalCart.show()
+}
+
+btnCloseCart.onclick = function () {
+  modalCart.close()
 }

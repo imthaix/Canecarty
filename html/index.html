@@ -33,29 +33,61 @@
                     <div class="line3"></div>
                 </div>
 
-                <a class="logo" href="/html/index.html"> CANECARTY </a>
+                
+                <div class="logo">
+                    <a href="/html/index.html"> CANECARTY </a>
+                </div>
 
 
+                <div>
                     <nav>
+
                         <div class="img-navbar">
 
-                            <button class="btn-user">
-                                <img src="/assets/user.png" alt="usuario" class="img-user">
-                            </button>
+                            <div> <!-- div para botao do usuario-->
+                                <button class="btn-user">
+                                    <img src="/assets/user.png" alt="usuario" class="img-user"> <!-- 👤 -->
+                                </button>
 
-                            <!-- tela popup modal para criação de conta/acesso a conta do usuario -->
-                            <dialog open>
-                                <h2> Crie sua conta </h2>
+                                <!-- tela popup modal para criação de conta/acesso a conta do usuario -->
+                                <dialog>
+                                    <h2> Crie sua conta </h2>
 
-                                <p> teste </p>
-                            </dialog>
+                                    <form method="dialogForm">
+                                        <input type="email" placeholder="Digite seu email" required>
+                                        <input type="password" placeholder="Digite sua senha" required>
+                                        <button type="submit"> Criar conta </button>
+                                        <a href="#">esqueceu sua senha? </a>
+                                    </form>
+
+                                    <button class="btn-closeForm"> fechar </button>
+                                </dialog>
+                            </div>
 
 
-                            <a href="#">
-                                <img src="/assets/carrinho.png" alt="carrinho" class="img-card">
-                            </a>
+                            <div> <!-- div para o botao do carrinho de compras -->
+                                <button class="btn-cart">
+                                    <img src="/assets/carrinho.png" alt="carrinho" class="img-cart">
+                                </button>
+
+
+                                <!-- tela popup modal para o carrinho de compras -->
+                                <dialog class="dialogCart">
+                                    <h2> Carrinho de Compras </h2>
+
+                                    <form method="dialogCart">
+                                        <p> Seu carrinho está vazio. </p>
+                                        <button type="submit"> Continuar comprando </button>
+                                    </form>
+
+                                    <button class="btn-goCart"> ir para carrinho </button>
+                                </dialog>
+                            </div>
+                            
                         </div>
                     </nav>
+                </div>
+                    
 
             </nav>
         <!-- fim da navegação do menu do site-->

@@ -88,14 +88,20 @@ nav{
     display: block;
     }
 
-    .img-user{
-        width: 30px;
-        height: 30px;
+    .btn-user, .img-user,
+    .btn-cart, .img-cart{
+    width: 50px;
+    padding: 1px;
     }
 
-
-    
+    .img-cart,
+    .img-user{
+    width: 20px;
+    height: 20px;
+    margin-right: 1px;
+    }
 }
+
 .nav-list.active{
     transform: translateX(0);
 }
@@ -124,12 +130,13 @@ nav{
 }
 
 
-.img-card,
+.img-cart,
 .img-user{
     width: 20px;
     height: 20px;
     margin-right: 1px;
 }
+
 
 
 /* FOOTER QUE VAI SER PADRÃO E FIXADA EM TODAS EM PAGINAS */
