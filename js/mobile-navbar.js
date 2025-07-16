@@ -51,6 +51,6 @@ mobileNavbar.init();
 const button = document.querySelector("button")
 const modal = document.querySelector("dialog")
 
-button.oneclick = function () {
-  modal.showModal()
+button.onclick = function () {
+  modal.show()
 }

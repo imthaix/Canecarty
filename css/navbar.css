@@ -88,6 +88,11 @@ nav{
     display: block;
     }
 
+    .img-user{
+        width: 30px;
+        height: 30px;
+    }
+
 
     
 }
@@ -123,9 +128,8 @@ nav{
 .img-user{
     width: 20px;
     height: 20px;
-    margin-right: 10px;
+    margin-right: 1px;
 }
-
 
 
 /* FOOTER QUE VAI SER PADRÃO E FIXADA EM TODAS EM PAGINAS */
